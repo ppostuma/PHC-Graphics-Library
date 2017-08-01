@@ -37,7 +37,7 @@ Downsides - large, full-colour PHC files may even be slower than JPG, and don't 
 
 [Bodmer's TFT_eSPI library](https://github.com/Bodmer/TFT_eSPI)
 
-Highly recommended: Peter Andersson's SPIFFS version 0.3.7 or better. Depending on where in SPIFFS a file is located, it can read extremely slowly, an idiosyncracy that appears to have been resolved with 0.3.7. For example, file trainer32_wu.PHC above on one ESP8266 took 845 milliseconds to read with version 0.3.6 and 917 with version 0.3.4; with version 0.3.7 it takes 52. Original code at https://github.com/pellepl/spiffs; my fork at https://github.com/ppostuma/spiffs
+Highly recommended: Peter Andersson's SPIFFS version 0.3.7 or better. Depending on where in SPIFFS a file is located, it can read extremely slowly, an idiosyncracy that appears to have been resolved with 0.3.7. For example, one particular file took 845 milliseconds to read with version 0.3.6 and 917 with version 0.3.4; with version 0.3.7 it takes 52. Original code at https://github.com/pellepl/spiffs; my fork at https://github.com/ppostuma/spiffs
 
 
 ## Pre-processing
