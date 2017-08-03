@@ -81,9 +81,23 @@ You have:
 
 To run the demo sketch:
 
-* download the files. Load PHC_graphics_demo.INO. This should pull PHC_graphics into a second tab.
+* download the files. Load PHC_graphics_demo.INO. This should pull PHC_graphics into a second tab
 * select Tools > ESP8266 Sketch Data Upload to write the four PHC files to SPIFFS
 * cycle power to the ESP8266, then upload the sketch
+
+For your own code:
+
+* Include, at the top of the main sketch:
+```
+#include <TFT_eSPI.h>                             //graphics: replaces the Adafruit GFX and TFT libraries
+#include <FS.h>                                   //read files from SPIFFS
+
+TFT_eSPI tft = TFT_eSPI();                        //initialize TFT screen; PHC library expects it to be called "tft"
+fs::File fileSPI;                                 //file handle
+```
+as shown in the demo code
+* Initialize SPIFFS in Setup()
+* add PHC_graphics.INO code into a new tab in your own sketch
 
 Good luck!
      
