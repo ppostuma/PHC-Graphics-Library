@@ -1,6 +1,6 @@
-# PHC Graphics Library
+# PHC Graphics Library, version 1.0
 
-This is a graphics library for a new image format, PHC. Images files are lossless RGB565-encoded, either paletted or full-colour, with optional RLE-compression, and are created from BMP, GIF, or PNG. Transparency is removed but a background colour may be specified during conversion. Images are read from SPIFFS and rendered to TFT display screens using [Bodmer's excellent TFT_eSPI library](https://github.com/Bodmer/TFT_eSPI), typically about twice as fast as JPGs rendered using his (also excellent) [JPEGDecoder](https://github.com/Bodmer/JPEGDecoder).
+This is a graphics library for a new image format, PHC. Images files are lossless RGB565-encoded, either paletted or full-colour, with optional custom RLE-compression, and are created from BMP, GIF, or PNG. Transparency is removed but a background colour may be specified during conversion. Images are read from SPIFFS and rendered to TFT display screens using [Bodmer's excellent TFT_eSPI library](https://github.com/Bodmer/TFT_eSPI), typically about twice as fast as JPGs rendered using his (also excellent) [JPEGDecoder](https://github.com/Bodmer/JPEGDecoder).
 
 An annotated PHP script is included to produce these files. 
 
@@ -70,5 +70,21 @@ Limitations:
 * encoding large images is slow - can take seconds for images of 320x240 pixels or more, as the script determines the optimal compression strategy (this is where a small stand-alone program would be much better, but I simply can't be bothered as the script as is does what I need it to, very nicely)
 * PHP scripts can choke and crash on images that are too large
 * decoding is slower for full-colour, larger images
+
+## Finally: USAGE
+
+You have:
+
+* installed Bodmer's library and configured it for your ESP8266 and TFT screen
+* optionally-but-recommended: updated SPIFFS to 0.3.7
+* optimized your images, and converted to PHC
+
+To run the demo sketch:
+
+* download the files. Load PHC_graphics_demo.INO. This should pull PHC_graphics into a second tab.
+* select Tools > ESP8266 Sketch Data Upload to write the four PHC files to SPIFFS
+* cycle power to the ESP8266, then upload the sketch
+
+Good luck!
      
-Anyway, I am putting it out there in case this is useful to someone else. Feel free to adapt and use to your heart's content ...
+I hope this is useful to someone else. Feel free to adapt and use to your heart's content ..
