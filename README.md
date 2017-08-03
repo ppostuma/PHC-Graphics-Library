@@ -89,14 +89,14 @@ For your own code:
 
 * Include, at the top of the main sketch:
 ```
-#include <TFT_eSPI.h>                             //graphics: replaces the Adafruit GFX and TFT libraries
-#include <FS.h>                                   //read files from SPIFFS
+#include <TFT_eSPI.h>
+#include <FS.h>
 
-TFT_eSPI tft = TFT_eSPI();                        //initialize TFT screen; PHC library expects it to be called "tft"
-fs::File fileSPI;                                 //file handle
+TFT_eSPI tft = TFT_eSPI();
+fs::File fileSPI;
 ```
 as shown in the demo code
-* Initialize SPIFFS in Setup()
+* Initialize SPIFFS in setup()
 * add PHC_graphics.INO code into a new tab in your own sketch
 
 Good luck!
