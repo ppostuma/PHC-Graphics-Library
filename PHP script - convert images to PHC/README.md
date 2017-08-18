@@ -1,0 +1,1 @@
+PHP script used to convert BMP, JPG and PNG images to RBG565-encoded PHC files. RGB565toPHC.php is the main file, the other two are includes. A functional web server with PHP install is required - if you don't already have one installed, either XAMPP or WampServer offer all-in-one distributions that automate their installation.
